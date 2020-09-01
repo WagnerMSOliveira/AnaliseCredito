@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AnaliseCredito</string>
+    <string name="chave_preferencias">chave_preferencias</string>
+</resources>
