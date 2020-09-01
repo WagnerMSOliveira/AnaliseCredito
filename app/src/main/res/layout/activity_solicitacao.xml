@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#03a9f4"
     tools:context=".SolicitacaoActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="32dp"
         android:text="Por favor, escolha a opção de empréstimo:"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,21 +36,27 @@
 
         <RadioButton
             android:id="@+id/radio_button_solicitacao_emprestimo_pessoal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:buttonTint="#ffffff"
+            android:text="Empréstimo Pessoal"
+            android:textColor="#ffffff" />
 
         <RadioButton
             android:id="@+id/radio_button_solicitacao_emprestimo_garantia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:buttonTint="#ffffff"
+            android:text="Empréstimo com Garantia"
+            android:textColor="#ffffff" />
 
         <RadioButton
             android:id="@+id/radio_button_solicitacao_emprestimo_consignado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:buttonTint="#ffffff"
+            android:text="Empréstimo Consignado"
+            android:textColor="#ffffff" />
     </RadioGroup>
 
     <TextView
@@ -59,6 +67,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         android:text="Informe o valor desejado:"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -69,9 +78,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="#ffffff"
         android:ems="10"
         android:hint="R$"
         android:inputType="numberDecimal"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textCursorDrawable="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -84,6 +97,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         android:text="Em quantas parcelas quer pagar?"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_solicitacao_emprestimo_valor" />
@@ -94,9 +108,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="#ffffff"
         android:ems="10"
         android:hint="N° de parcelas"
         android:inputType="number"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textCursorDrawable="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -109,6 +127,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:text="Total a pagar"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_solicitacao_emprestimo_parcelas" />
@@ -117,6 +136,8 @@
         android:id="@+id/text_view_solicitacao_emprestimo_taxa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="0,0% ao Mês"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_solicitacao_emprestimo_valor_total" />
@@ -125,8 +146,9 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:text="Parcelas fixas"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_solicitacao_emprestimo_taxa" />
@@ -135,15 +157,23 @@
         android:id="@+id/text_view_solicitacao_emprestimo_valor_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:layout_editor_absoluteX="181dp" />
+        android:text="R$ 0,00"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/text_view_solicitacao_emprestimo_valor_parcela"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:layout_editor_absoluteX="177dp" />
+        android:text="R$ 0,00"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/button_solicitacao_emprestimo_confirmar"
@@ -151,9 +181,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
         android:text="Confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_solicitacao_emprestimo_valor_parcela" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
