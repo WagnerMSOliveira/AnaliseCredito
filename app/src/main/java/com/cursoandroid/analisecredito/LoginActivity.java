@@ -64,7 +64,9 @@ public class LoginActivity extends AppCompatActivity {
                         editTextSenha.setError("Senha Incorreta");
 
                     }else {
-                        Toast.makeText(getApplicationContext(),"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }else{
                     Toast.makeText(getApplicationContext(),"Usuario não cadastrado!", Toast.LENGTH_SHORT).show();

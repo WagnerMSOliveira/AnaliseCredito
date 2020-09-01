@@ -10,13 +10,12 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 
 public class SolicitacaoActivity extends AppCompatActivity {
 
     private RadioButton radioButtonPessoal;
     private RadioButton radioButtonGarantia;
-    private RadioButton radioButtonConsignado:
+    private RadioButton radioButtonConsignado;
     private EditText editTextValor;
     private EditText editTextParcelas;
     private TextView textViewTaxa;
@@ -50,10 +49,6 @@ public class SolicitacaoActivity extends AppCompatActivity {
             usuario.setEmail(preferencia.getString(Usuario.CHAVE_EMAIL, ""));
             usuario.setSenha(preferencia.getString(Usuario.CHAVE_SENHA, ""));
         }
-        if (preferencia.contains(Usuario.CHAVE_LISTA_PROPOSTAS)){
-            String propostasJson = preferencia.getString(Usuario.CHAVE_LISTA_PROPOSTAS, "");
-            Gson formatador = new Gson();
-            formatador.fromJson(propostasJson,Emprestimo.class);
-        }
+
     }
 }
